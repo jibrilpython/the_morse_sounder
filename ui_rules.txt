@@ -1,0 +1,41 @@
+1. DESIGN PHILOSOPHY
+Visual: "Signal & Silence" — the UI is built around the fundamental duality of the sounder itself: the dot and the dash, the on and the off, the click and the clack. High contrast, rhythm-driven layout, and deliberate negative space that makes every element feel like it was placed with the precision of a trained telegraphist. Think a modern music app redesigned for electrical engineers — dark, focused, and deeply intentional.
+Mood: focused, rhythmic, high-contrast, collector-serious, quietly electric.
+Important: No steampunk ornamentation, no brass-texture overlays, no Victorian flourish. The sounder was a precision instrument — the app should feel like one too. Every element earns its place.
+
+2. COLORS
+#0D0D0D — Main background (transmission black — the silence between signals)
+#F0EDE8 — Primary text & high-contrast elements (warm off-white, like paper tape)
+#161616 — Secondary panels / card surfaces
+#5A5A5A — Secondary text / muted labels
+#E8C547 — Primary accent (sounder gold — the color of brass armatures and binding posts under workshop light)
+#242424 — Outline / stroke / dividers
+#C0392B — Critical errors only
+Important: The gold accent is the heartbeat of the whole palette — it should appear exactly where the user's attention needs to land. One primary action per screen, one gold element. Never use it decoratively. The near-black background is non-negotiable: this is a dark-first app, the way a telegraph office looked at night under a single lamp.
+
+3. TYPOGRAPHY
+Display / Headings: Syne (weight 700–800) — sharp, wide, geometric. Used for instrument names and screen titles. Has an almost waveform quality at large sizes — feels like oscilloscope output rendered as type.
+Body / Descriptions: DM Sans (weight 300–400) — clean, neutral, light. For condition notes, provenance text, and all readable prose. Light weight on dark reads with refinement, not weakness.
+Monospace / Identifiers: JetBrains Mono — for archive codes like TMS-WESTERN-UNION-1882-USA-TOWER-047, resistance values (in ohms), coil specs, and all technical fields. Every identifier should feel like a circuit annotation.
+Important: The contrast between Syne's width and DM Sans's neutrality creates the dot-dash rhythm visually — big bold headers, quiet body text. Let the space between them breathe.
+
+4. SURFACE & TEXTURE LANGUAGE
+
+Backgrounds: flat transmission black — no noise, no grain, no vignette
+Cards: #161616 surface with a 1px border at #242424 and 10px radius — like instrument housings in a display case under low light
+Gold accent line: a single 1px horizontal rule in #E8C547 used as a selected-state indicator under active nav tabs and as a separator between the identifier and the instrument name on detail views
+Sounder type badge: each entry gets a category badge — Tower (#1A1A1A bg, #E8C547 text), Desktop, Field, Galvanometric, Relay — rendered in JetBrains Mono uppercase, tight tracking
+Photography: sounder photography full-bleed on black — no borders, no padding, as if the instrument is floating in darkness. The brass catches light; the rest disappears.
+Dot-dash motif: optionally, a very subtle decorative element — a row of small filled and unfilled circles (● ● ○ ●) in #242424 used as a divider between sections, referencing Morse without being literal about it
+
+
+5. INTERACTION PRINCIPLES
+
+Transitions: 150–180ms ease-out — fast, precise, telegraphic. No spring physics, no bounce.
+Selected state: gold bottom-border on nav tabs; gold left-border (3px) + #141400 tint on active list cards
+Empty states: NO SOUNDERS RECORDED. in JetBrains Mono, centered in gold — one line, treated like a transmission waiting to be received
+Loading: a thin gold progress bar at the very top of the screen — no spinners, no skeletons
+Navigation: bottom tab bar with four tabs: Catalog, Network Map, Logbook, Settings — icon only, label appears only on active tab
+Sound: a first-class optional feature — tapping a sounder card can play a single authentic click-clack sample, one dot-dash pair, using the device's haptic engine alongside the audio
+
+Important: The archive identifier is the primary key of the entire experience — it should be the first thing that appears when opening a record, displayed large in JetBrains Mono in gold before the instrument name. Make it feel like a transmission header.
